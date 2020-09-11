@@ -8,7 +8,7 @@ COPY --from=balenalib/generic-aarch64-alpine /usr/bin/cross-build-end /usr/bin/c
 RUN [ "cross-build-start" ]
 
 RUN apk --no-cache add wget \
-&& wget --no-check-certificate -O s6-overlay.tar.gz https://github.com/just-containers/s6-overlay/releases/download/v1.22.1.0/s6-overlay-aarch64.tar.gz \
+&& wget --no-check-certificate -O s6-overlay.tar.gz https://github.com/just-containers/s6-overlay/releases/download/v2.0.0.1/s6-overlay-aarch64.tar.gz \
 && tar xzf s6-overlay.tar.gz -C /tmp 
 
 RUN [ "cross-build-end" ]
